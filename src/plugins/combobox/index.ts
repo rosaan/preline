@@ -582,6 +582,13 @@ class HSComboBox extends HSBasePlugin<IComboBoxOptions> implements IComboBox {
 		this.selected = val;
 		this.value = val;
 		this.input.value = val;
+
+		const event = new Event('change', {
+			bubbles: true,
+			cancelable: true,
+		});
+
+		this.input.dispatchEvent(event);
 	}
 
 	private setItemsVisibility() {

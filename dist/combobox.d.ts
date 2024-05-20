@@ -118,6 +118,8 @@ declare class HSComboBox extends HSBasePlugin<IComboBoxOptions> implements IComb
 	static autoInit(): void;
 	static close(target: HTMLElement | string): void;
 	static closeCurrentlyOpened(evtTarget?: HTMLElement | null): void;
+	private static getPreparedItems;
+	private static setHighlighted;
 	static accessibility(evt: KeyboardEvent): void;
 	static onEscape(): void;
 	static onArrow(isArrowUp?: boolean): boolean;
